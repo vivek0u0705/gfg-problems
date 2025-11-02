@@ -20,7 +20,7 @@ class Solution {
         for(int i=0;i<m;i++){
             boolean b=false;
             for(int j=n-1;j>=0;j--){
-                if(mat[i][j]==-1) b=false;
+                if(mat[i][j]==-1)b=false;
                 if(mat[i][j]==1) b=true;
                 if(b && mat[i][j]==0) mat[i][j]=2;
             }
@@ -29,7 +29,7 @@ class Solution {
          for(int i=0;i<n;i++){
             boolean b=false;
             for(int j=0;j<m;j++){
-                if(mat[j][i]==-1) b=false;
+                if(mat[j][i]==-1)b=false;
                 if(mat[j][i]==1) b=true;
                 if(b && mat[j][i]==0) mat[j][i]=2;
             }
