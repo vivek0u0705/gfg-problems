@@ -45,8 +45,8 @@ class Solution {
     }
     public static void dfs(int i,List<List<Pair>> adj,int[] vis,int[] c,int wtt,int rd,int V){
         if (wtt > rd) return;
-        if(i==V-1){
-            if(wtt==rd) c[0]++;
+        if(i==V-1 && wtt==rd){
+            c[0]++;
             return;
         }
         vis[i]=1;
