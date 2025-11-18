@@ -53,8 +53,9 @@ class Solution {
         for(Pair adjN:adj.get(i)){
             if(vis[adjN.v]==0){
                 dfs(adjN.v,adj,vis,c,wtt+adjN.wt,rd,V);
+                vis[i]=0;
             }
         }
-        vis[i]=0;
+        
     }
 }
