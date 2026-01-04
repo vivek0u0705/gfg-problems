@@ -24,7 +24,7 @@ class Solution {
             }
         }
         li.sort((a,b)->{
-            for(int i=0;i<4;i++){
+            for(int i=0;i<n;i++){
                 int t=a.get(i).compareTo(b.get(i));
                 if(t!=0) return t;
             }
