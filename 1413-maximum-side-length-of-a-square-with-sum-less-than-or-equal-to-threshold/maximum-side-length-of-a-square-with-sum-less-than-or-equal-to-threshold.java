@@ -17,14 +17,27 @@ class Solution {
         }
         int len=Math.min(m,n);
         int max=0;
-        for(int k=1;k<=len;k++){
+        int l=1;
+        int h=len;
+        while(l<=h){
+            int k=(l+h)/2;
+            boolean f=false;
             for(int i=0;i<n-k+1;i++){
+                if(f) break;
                 for(int j=0;j<m-k+1;j++){
                         int s=sum(i,j,k,pf);
                         if(s<=th){
-                           max=Math.max(max,k);
+                           f=true;
+                           break;
                         }
                 }
+            }
+            if(f){
+                max=k;
+                l=k+1;
+            }
+            else{
+                h=k-1;
             }
         }
     return max;
