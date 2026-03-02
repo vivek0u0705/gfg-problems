@@ -16,8 +16,9 @@ class Solution {
         for(int i=0;i<n;i++){
             int nd=n-i-1;
             int j=i;
-            while(j<n && ans[j]<nd){
-                j++;
+            while(j<n){
+                if(ans[j]>=nd) break;
+                else j++;
             }
             if(j==n) return -1;
             while(j>i){
