@@ -10,7 +10,7 @@ class Solution {
             arr1[i]=arr1[i-1]+(long)nums[i-1];
         }
         for(int i=n-2;i>=0;i--){
-            if(arr2[i+1]> lt/(long)nums[i+1]){
+            if((long)nums[i+1] > lt/arr2[i+1]){
                 arr2[i]=-1;
             }
             else arr2[i]=arr2[i+1]*nums[i+1];
