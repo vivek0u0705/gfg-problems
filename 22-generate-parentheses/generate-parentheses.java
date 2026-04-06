@@ -7,7 +7,7 @@ class Solution {
     }
     public static void g(int n,List<String> r,String cur,int o,int c){
         if(c>o) return;
-        if(o==n && o==c) {
+        if(cur.length()==2*n) {
             r.add(cur);
             return;
         }
