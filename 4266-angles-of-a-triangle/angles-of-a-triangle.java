@@ -6,12 +6,9 @@ class Solution {
         double cosA=(b*b+c*c-a*a) / (2.0*b*c);
         double cosB=(-b*b+c*c+a*a) / (2.0*a*c);
         double cosC=(b*b-c*c+a*a) / (2.0*b*a);     // cos   range [-1 t0 1]   
-        cosA = Math.max(-1, Math.min(1, cosA));    //we make in rnge
-        cosB = Math.max(-1, Math.min(1, cosB));
-        cosC = Math.max(-1, Math.min(1, cosC));
         double Ad=Math.toDegrees(Math.acos(cosA));    //cos value to radian
-        double Bd=Math.toDegrees(Math.acos(cosB));   // ran -> deg    x*(180)/pi
-        double Cd=Math.acos(cosC)* (180)/Math.PI;
+        double Bd=Math.toDegrees(Math.acos(cosB));   //   pi rac = 180 deg
+        double Cd=Math.acos(cosC)* (180)/Math.PI;     // ran -> deg    x*(180)/pi
         double[] arr=new double[3];
         arr[0]=Ad;
         arr[1]=Bd;
