@@ -11,7 +11,7 @@ class Solution {
         if(dp[i]!=-1) return dp[i];
         int maxS=-(int)1e9;
         for(int j=i+1;j<n;j++){
-            long val=nums[j]-nums[i];
+            int val=nums[j]-nums[i];
             if(-tar<=val && val<=tar){
                 int next=f(nums,j,tar,dp);
                 if(next!=-(int)1e9) maxS=Math.max(maxS,1+next);
