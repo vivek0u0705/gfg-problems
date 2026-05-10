@@ -14,7 +14,7 @@ class Solution {
             int val=nums[j]-nums[i];
             if(-tar<=val && val<=tar){
                 int next=f(nums,j,tar,dp);
-                if(next!=-(int)1e9) maxS=Math.max(maxS,1+next);
+                if(next!=-(int)1e9) maxS=Math.max(maxS,1+next); // - 1e9 means no valid state from o  -> n-1
             }
         }
     return dp[i]=maxS;
