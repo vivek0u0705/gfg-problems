@@ -38,7 +38,7 @@ class Solution {
         }
         fs=sbb.toString();
         // System.out.print(fs);
-        String[] stg = fs.split("[^a-z-]+");
+        String[] stg = fs.split(" ");
         HashMap<String,Integer> hm=new HashMap<>();
         for(int i=0;i<stg.length;i++){
             String c=stg[i];
