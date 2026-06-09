@@ -5,24 +5,23 @@ class Solution {
         for(int i:nums) ts+=i;
         if(ts%k!=0) return false;
         int tar=ts/k;
-        int mask=(1<<n)-1;
-        int[] dp=new int[mask+1];
+        int[] dp=new int[1<<n];
         Arrays.fill(dp,-1);
-    return f(nums,tar,mask,0,dp);
+    return f(nums,tar,0,0,dp);
     }
     static boolean f(int[] nums,int tar,int mask,int curSum,int[] dp){
         int n=nums.length;
-        if(mask==0) {
-            if(curSum%tar==0) return true;
+        if(mask==(1<<n)-1) {
+            if(curSum==0) return true;
             else return false;
         }
         if(dp[mask]!=-1) return dp[mask]==1;
-        if(curSum==tar) return f(nums,tar,mask,0,dp);
         for(int i=0;i<n;i++){
-            if((mask&(1<<i))==0) continue;
+            if((mask&(1<<i))!=0) continue;
             if(curSum+nums[i]> tar) continue;
-            int Nmask=(mask & ~(1<<i));
-            if(f(nums,tar,Nmask,curSum+nums[i],dp)){
+            int newSum=curSum+nums[i];
+            int Nmask=(mask | (1<<i));
+            if(f(nums,tar,Nmask,newSum%tar,dp)){
                 dp[mask]=1;
                 return true;
             }
