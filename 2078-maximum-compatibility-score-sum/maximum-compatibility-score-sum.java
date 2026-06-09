@@ -28,3 +28,7 @@ class Solution {
     return ans;
     }
 }
+
+
+
+//keep dp bitmask if contrains >=20
