@@ -32,3 +32,7 @@ class Solution {
     return dp[pos][tight][lz][mask]=ans;
     }
 }
+
+
+
+//by this we can also also leecode no 2376 which the question need our fn value
