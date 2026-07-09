@@ -18,9 +18,10 @@ class Solution {
             while(!q.isEmpty() && i-q.peekFirst() >= k){
                 q.pollFirst();
             }
+            q.addLast(i);
             if(!q.isEmpty())li.add(arr[q.peekFirst()]);
             else li.add(arr[i]);
-            q.addLast(i);
+            
         }
     return li;
     }
