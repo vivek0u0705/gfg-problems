@@ -35,7 +35,7 @@ class Solution {
                 }
             }
             else if(v!=par){
-                low[u]=Math.min(low[u],low[v]);
+                low[u]=Math.min(low[u],dt[v]);
             }
         }
     }
