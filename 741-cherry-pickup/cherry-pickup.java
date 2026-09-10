@@ -38,3 +38,6 @@ class Solution {
 
     }
 }
+//we can also reduce dimention to 3d state (r1,c1,r2) or (r1,c1,c2)
+//beacuse (r1+c1)==(r2+c2) for k-steps equal 
+// c2=r1+c1-r2;
