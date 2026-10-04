@@ -2,7 +2,7 @@ class Solution {
     Long dp[][][][];
     public long maxAlternatingSum(int[] nums) {
         int n=nums.length;
-        if(n==1) return nums[0];
+        // if(n==1) return nums[0];
         dp=new Long[n][2][2][2];
         long ans=-(long)1e18;
         for(int i=0;i<n;i++) {
