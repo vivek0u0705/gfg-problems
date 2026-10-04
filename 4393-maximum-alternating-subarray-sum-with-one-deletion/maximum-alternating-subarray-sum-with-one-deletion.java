@@ -8,14 +8,18 @@ class Solution {
         for(int i=0;i<n;i++) {
             ans=Math.max(ans,f(i,nums,0,0,0)); 
             // states (idx,par,deleted or not, atleast one taken)
+            // need to check for every staring idx 
         }
     return ans;
     }
     public long f(int i,int[] nums,int par,int del,int ct){
         if(i==nums.length) return ct==1?0:-(long)1e18;
+
         if(dp[i][par][del][ct]!=null) return dp[i][par][del][ct];
+
         long nt=-(long)1e18;
         if(del==0) nt=f(i+1,nums,par,1,ct);
+
         long t=0;
         if(par==0){
             t+=nums[i]+f(i+1,nums,1,del,ct|1);
@@ -23,6 +27,7 @@ class Solution {
         else{
             t=-nums[i]+f(i+1,nums,0,del,ct|1);
         }
+        
         long stop=(ct==1)?0:-(long)1e18;
     return dp[i][par][del][ct]=Math.max(stop,Math.max(nt,t));
     }
